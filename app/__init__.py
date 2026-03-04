@@ -8,9 +8,11 @@ from flasgger import Swagger
 db = SQLAlchemy()
 jwt = JWTManager()
 
-def create_app():
+def create_app(config_class=Config):
     app = Flask(__name__)
-    app.config.from_object(Config)
+
+    # ✅ Cargar config (normal o testing)
+    app.config.from_object(config_class)
 
     db.init_app(app)
     CORS(app)

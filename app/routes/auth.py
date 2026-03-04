@@ -106,5 +106,14 @@ def login():
     if not u or not u.check_password(password):
         return jsonify({"error": "Credenciales inválidas"}), 401
 
-    token = create_access_token(identity={"id": u.id, "username": u.username, "rol": u.rol})
+    # ✅ FIX: identity debe ser STRING (va al claim "sub")
+    # ✅ Lo extra se manda en claims adicionales
+    token = create_access_token(
+        identity=str(u.id),
+        additional_claims={
+            "username": u.username,
+            "rol": u.rol
+        }
+    )
+
     return jsonify({"access_token": token, "usuario": u.to_dict()}), 200
