@@ -81,7 +81,7 @@ Se ejecutaron un total de **12 pruebas automatizadas**, obteniendo el siguiente 
 ================================================
 ```
 
-![Create](prueba.png)
+![Create](pruebas.png)
 
 ---
 
