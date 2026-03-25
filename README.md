@@ -81,6 +81,10 @@ Se ejecutaron un total de **12 pruebas automatizadas**, obteniendo el siguiente 
 ================================================
 ```
 
+![Create](prueba.png)
+
+---
+
 ✔ Todas las pruebas fueron exitosas
 ✔ El sistema funciona correctamente
 ✔ Se validaron los módulos principales de la API
